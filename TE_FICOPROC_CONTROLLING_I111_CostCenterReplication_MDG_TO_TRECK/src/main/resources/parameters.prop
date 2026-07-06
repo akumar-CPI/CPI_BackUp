@@ -1,0 +1,44 @@
+#
+#Thu Mar 26 15:16:44 UTC 2026
+UseFastExistsCheck=1
+FlattenFileNames=0
+SSH_Key=sdfrhdsaprisesftp01
+Directory_1=/outbound/TRECK/ready
+Query=$expand\=to_Text&$filter\=CompanyCode%20eq%20'${header.CompanyCode}'%20and%20ValidityEndDate%20ge%20datetime'${property.TodayDate}T00%3A00%3A00'%20and%20IsBlkdForPrimaryCostsPosting%20ne%20'X'&sap-client\=110
+SAP_Receiver=TRECK
+Scheduler=<row><cell>dateType</cell><cell>SIMPLE</cell></row><row><cell>hourValue</cell><cell>18</cell></row><row><cell>minutesValue</cell><cell>18</cell></row><row><cell>timeType</cell><cell>ON_TIME</cell></row><row><cell>timeZone</cell><cell>( UTC 0\:00 ) Greenwich Mean Time(Etc/GMT)</cell></row><row><cell>throwExceptionOnExpiry</cell><cell>true</cell></row><row><cell>second</cell><cell>0</cell></row><row><cell>minute</cell><cell>0</cell></row><row><cell>hour</cell><cell>0</cell></row><row><cell>day_of_month</cell><cell>?</cell></row><row><cell>month</cell><cell>*</cell></row><row><cell>dayOfWeek</cell><cell>MON,TUE,WED,THU,FRI</cell></row><row><cell>year</cell><cell>*</cell></row><row><cell>startAt</cell><cell>2026-01-06T20\:04\:00</cell></row><row><cell>endAt</cell><cell></cell></row><row><cell>attributeBehaviour</cell><cell>isThrowExceptionOnExpiryVisible,isScheduleAdvancedVisible,isScheduleAdvancedStartEndVisible,isScheduleSimpleVisible</cell></row><row><cell>triggerType</cell><cell>cron</cell></row><row><cell>noOfSchedules</cell><cell>1</cell></row><row><cell>schedule1</cell><cell>simple.repeat\=DAYS&amp;simple.every\=1&amp;trigger.timeZone\=Etc/GMT&amp;trigger.startAt\=2026-01-06T20\:04\:00</cell></row>
+UseTempFile=0
+Archive_Directory=/outbound/TRECK/archive
+PD_Address=/MDGToken
+Archive_LocationId=
+Archive_UserName=sdfrhdsaprisesftp01
+PDA=TRECKCostCenter_Retry
+SAP_Sender=MDG
+SFTP1_Address=vhtgibd1ci
+ArchiveSFTP_Address=vhtgibd1ci
+Resend_Queue=I000_ResendQueue
+JMSQueueName=I000_MDG_RetryQueue
+SFTP_Address=vhtgibd1ci
+File\ Name=${date\:now\:yyyyMMddHHmmss}_ACC_${header.CompanyCode}.csv
+SAP_ApplicationID=I111_TreckCostCenter
+Directory=/outbound/TRECK/ready
+Threshold=2
+Archive_FileName=${date\:now\:yyyyMMddHHmmss}_ACC_${header.CompanyCode}.csv
+PD1_Address=/TRECKCostCenter_Retry
+UserName=sdfrhdsaprisesftp01
+ChangeDirectoriesStepwise=1
+CredentialName=TRECK_S4
+LocationId=
+Expiration=30
+HandlingForExistingFiles=Override
+Encrypt=1
+MDG_Host=http\://vhtgimd1ci.rise.mdg.cloud.corp.local\:20400
+PreventDirectoryTraversal=1
+CompanyCodes=<CompanyCodes> \u2003<CompanyCode>F003</CompanyCode> \u2003<CompanyCode>F002</CompanyCode> </CompanyCodes>
+Archive_ProxyType=sapcc
+Resend_Condition=${header.SAPJMSRetries} &gt; &apos;1&apos; and ${header.SAPJMSRetries} \!\= null and ${header.RetryType} \!\= &apos;Resend&apos;
+Scope=ZAPI_COSTCENTER_SRV_0001
+SAP_MessageType=TBD
+Environment=ama-fr-totalenergiestest
+CreateDirectories=0
+Archive_SSH_Key=sdfrhdsaprisesftp01

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="item">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fdf_system" />
+              <xs:element name="fdf_location_external_reference" />
+              <xs:element name="fdf_policy_group" />
+              <xs:element name="fdf_name" />
+              <xs:element name="fdf_fixed_value" />
+              <xs:element name="fdf_pnr_entry" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

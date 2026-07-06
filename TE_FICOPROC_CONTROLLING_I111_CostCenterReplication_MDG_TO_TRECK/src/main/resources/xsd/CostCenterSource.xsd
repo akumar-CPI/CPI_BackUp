@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="d">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="results">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="__metadata">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="id" type="xs:string" />
+                          <xs:element name="uri" type="xs:string" />
+                          <xs:element name="type" type="xs:string" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ControllingArea" type="xs:unsignedShort" />
+                    <xs:element name="CostCenter" type="xs:unsignedInt" />
+                    <xs:element name="ValidityEndDate" type="xs:string" />
+                    <xs:element name="ValidityStartDate" type="xs:string" />
+                    <xs:element name="CompanyCode" type="xs:string" />
+                    <xs:element name="BusinessArea" type="xs:unsignedByte" />
+                    <xs:element name="CostCtrResponsiblePersonName" type="xs:string" />
+                    <xs:element name="CostCtrResponsibleUser" />
+                    <xs:element name="CostCenterCurrency" type="xs:string" />
+                    <xs:element name="ProfitCenter" />
+                    <xs:element name="Department" />
+                    <xs:element name="CostingSheet" />
+                    <xs:element name="FunctionalArea" />
+                    <xs:element name="Country" type="xs:string" />
+                    <xs:element name="Region" type="xs:unsignedByte" />
+                    <xs:element name="CityName" type="xs:string" />
+                    <xs:element name="CostCenterStandardHierArea" type="xs:unsignedShort" />
+                    <xs:element name="CostCenterCategory" type="xs:string" />
+                    <xs:element name="IsBlkdForPrimaryCostsPosting" type="xs:string" />
+                    <xs:element name="IsBlkdForSecondaryCostsPosting" type="xs:string" />
+                    <xs:element name="IsBlockedForRevenuePosting" type="xs:string" />
+                    <xs:element name="IsBlockedForCommitmentPosting" type="xs:string" />
+                    <xs:element name="IsBlockedForPlanPrimaryCosts" type="xs:string" />
+                    <xs:element name="IsBlockedForPlanSecondaryCosts" type="xs:string" />
+                    <xs:element name="IsBlockedForPlanRevenues" type="xs:string" />
+                    <xs:element name="ConsumptionQtyIsRecorded" type="xs:string" />
+                    <xs:element name="Language" type="xs:string" />
+                    <xs:element name="CostCenterCreatedByUser" type="xs:string" />
+                    <xs:element name="CostCenterCreationDate" type="xs:string" />
+                    <xs:element name="to_Text">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="results">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="__metadata">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="id" type="xs:string" />
+                                      <xs:element name="uri" type="xs:string" />
+                                      <xs:element name="type" type="xs:string" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="CostCenter" type="xs:unsignedShort" />
+                                <xs:element name="ControllingArea" type="xs:unsignedByte" />
+                                <xs:element name="Language" type="xs:string" />
+                                <xs:element name="ValidityEndDate" type="xs:string" />
+                                <xs:element name="ValidityStartDate" type="xs:string" />
+                                <xs:element name="CostCenterName" type="xs:string" />
+                                <xs:element name="CostCenterDescription" />
+                                <xs:element name="to_CostCenter">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="__deferred">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="uri" type="xs:string" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
