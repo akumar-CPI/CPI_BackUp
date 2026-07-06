@@ -1,0 +1,5 @@
+#Store metainfo properties
+#Mon Jul 06 11:08:53 UTC 2026
+description=This iflow is compliant wiht cpilint rules files.
+source=SAP
+target=Github
